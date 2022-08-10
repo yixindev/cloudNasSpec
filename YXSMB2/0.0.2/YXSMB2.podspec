@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/amosavian/AMSMB2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.authors          = { 'yixinDeveloper' => 'yixinDeveloper@163.com' }
-  s.source           = { :git => 'git@github.com:yixindev/YXSMB2.git',:tag => '0.0.2'}
+  s.source           = { :git => 'https://github.com/yixindev/YXSMB2.git',:tag => '0.0.2'}
   s.swift_version    = '5.0'
 
   s.source_files = 'YXSMB2.framework/**/*.h'
