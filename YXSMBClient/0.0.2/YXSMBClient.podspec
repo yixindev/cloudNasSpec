@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://com.yixin.im'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.authors          = { 'yixinDeveloper' => 'yixinDeveloper@163.com' }
-  s.source           = { :git => 'git@github.com:yixindev/YXSMBClient.git',:tag => '0.0.2'}
+  s.source           = { :git => 'https://github.com/yixindev/YXSMBClient.git',:tag => '0.0.2'}
   s.swift_version    = '5.0'
 
   s.ios.deployment_target = '10.0'
