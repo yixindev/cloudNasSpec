@@ -26,9 +26,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'YXSMBClient.framework'
 
   s.frameworks = "Foundation"
-  
-  s.static_framework = true
-  
+    
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
     
 end
