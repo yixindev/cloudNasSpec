@@ -19,14 +19,12 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'YXSMBClient.framework/**/*.h'
+  s.source_files = 'YXSMBClient/**/*.{h,m}'
 
   s.dependency 'YXSMB2'
 
-  s.vendored_frameworks = 'YXSMBClient.framework'
-
   s.frameworks = "Foundation"
-    
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
-    
+
+  s.pod_target_xcconfig = {'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64' }
+      
 end
