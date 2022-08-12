@@ -17,18 +17,16 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'git@github.com:yixindev/YXSMB2.git',:tag => '0.0.2'}
   s.swift_version    = '5.0'
 
-  s.source_files = 'YXSMB2.framework/**/*.h'
+  s.source_files = 'YXSMB2/AMSMB2/**/*.swift'
 
   s.ios.deployment_target = '10.0'
 
-  s.public_header_files = 'YXSMB2.framework/**/*.h'
-
-  s.vendored_frameworks = 'YXSMB2.framework'
-
-  s.ios.vendored_libraries = "lib/libsmb2-ios.a"
+  s.ios.vendored_libraries = "YXSMB2/libsmb2/lib/libsmb2-ios.a"
 
   s.frameworks = "Foundation"
-  
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+
+  s.pod_target_xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/YXSMB2/libsmb2/lib', 'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/YXSMB2/libsmb2/**','EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386 arm64' }
     
+  s.preserve_paths = "YXSMB2/libsmb2/include/**"
+
 end
