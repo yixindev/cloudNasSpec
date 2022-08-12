@@ -28,6 +28,8 @@ Pod::Spec.new do |s|
   s.ios.vendored_libraries = "lib/libsmb2-ios.a"
 
   s.frameworks = "Foundation"
+  
+  s.static_framework = true
 
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
     
